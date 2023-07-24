@@ -10,8 +10,13 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
+public class GetResponseDTO<T> {
 //http응답으로 사용
-public class ResponseDTO<T> {
-    private String error;                   //에러메세지를 보내줌
-    private List<T> data;
+
+        private String error;                   //에러메세지를 보내줌
+        //private String result;
+        private int status;
+        private List<T> data;
+
+
 }
