@@ -49,6 +49,12 @@ public class ChatService {
 
 
     }
+    public List<ChatEntity> retrieve(final ChatEntity entity) {
+
+        validate(entity);
+
+        return repository.findByChatId(entity.getChatId());
+    }
 
     private void validate(final ChatEntity entity) {
         if(entity == null) {

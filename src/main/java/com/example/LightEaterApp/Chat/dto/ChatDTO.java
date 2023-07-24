@@ -35,12 +35,4 @@ public class ChatDTO {
 
 
 
-    /*
-    private String relation;
-    private String chatFiles;
-    private String[] chatImage;
-    private String[] gSentence;
-    private int resultNum;
-    private Date chatDate;
-*/
 }
