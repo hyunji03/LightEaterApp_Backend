@@ -1,4 +1,4 @@
-package com.example.LightEaterApp.Chat.dto;
+package com.example.LightEaterApp.Chat.dto.test;
 
 import com.example.LightEaterApp.Chat.model.ChatEntity;
 import lombok.AllArgsConstructor;
@@ -21,20 +21,31 @@ public class ChatDTO {
     public ChatDTO(final ChatEntity chatEntity){
         this.chatId = chatEntity.getChatId();
         this.userId = chatEntity.getUserId();
-        this.chatWords = chatEntity.getChatWords();
+        //this.chatWords = chatEntity.getChatWords();
         this.resultNum = chatEntity.getResultNum();
     }
     public static ChatEntity toEntity(final ChatDTO dto) {
         return ChatEntity.builder()
                 .chatId(dto.getChatId())
                 .userId(dto.getUserId())
-                .chatWords(dto.getChatWords())
+                //.chatWords(dto.getChatWords())
                 .resultNum(dto.getResultNum())
                 .build();
     }
+    /*
+    public static List<Object> toArray(final ChatDTO dto) {
+        List<Object> array = new ArrayList<>();
 
+        array.add(dto.getChatId());
+        array.add(dto.getUserId());
+        array.add(dto.getChatWords());
+        array.add(dto.getResultNum());
+        array.add(dto.getChatId());
 
+        return array<>();
+    }
 
+*/
     /*
     private String relation;
     private String chatFiles;

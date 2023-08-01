@@ -11,11 +11,8 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-//http응답으로 사용
-public class ResponseDTO {
+public class ResponseListDTO<T> {
     private String error;                   //에러메세지를 보내줌
 
-    private ChatUploadDTO data;
+    private List<T> data;
 }
-
-
