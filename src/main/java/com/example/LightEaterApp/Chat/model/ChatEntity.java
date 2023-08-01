@@ -17,17 +17,28 @@ import java.util.Date;
 @AllArgsConstructor
 @Data
 @Entity
-@Table(name="Chat")
+@Table(name="ChatTable")
 public class ChatEntity {
     @Id
     //chatId는 자동 생성
     @GeneratedValue(generator = "system-uuid")
     @GenericGenerator(name="system-uuid", strategy = "uuid")
     private String chatId;
+    //!!!!!!!!임시 chatWords!!!!!!!!!!//
+    private String chatWords;
+
+
     private String userId;
-    //1학기 임시 테스트용 - 문장 주고 받기
-    private String chatWords;       //다희언니에게 변수명 물어보기
+
     private int resultNum;
+
+
+    //여기서 부터 엔티티 수정 2023-07-26
+    private int relation;
+    private String chatText;
+    private Date chatDate;
+    //private String doubtSentence;
+
 
 /*
     private String relation;
