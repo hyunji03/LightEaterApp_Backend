@@ -10,6 +10,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.net.URI;
 import java.util.Date;
 
 @Builder
@@ -24,8 +25,8 @@ public class ChatEntity {
     @GeneratedValue(generator = "system-uuid")
     @GenericGenerator(name="system-uuid", strategy = "uuid")
     private String chatId;
-    //!!!!!!!!임시 chatWords!!!!!!!!!!//
-    private String chatWords;
+
+    private URI chatData;
 
 
     private String userId;

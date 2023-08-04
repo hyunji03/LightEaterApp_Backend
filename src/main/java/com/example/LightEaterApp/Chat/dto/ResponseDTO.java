@@ -15,7 +15,7 @@ import java.util.List;
 public class ResponseDTO {
     private String error;                   //에러메세지를 보내줌
 
-    private ChatUploadDTO data;
+    private ChatResponseBodyDTO data;
 }
 
 

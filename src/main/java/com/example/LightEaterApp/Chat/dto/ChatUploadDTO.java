@@ -7,6 +7,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.net.URI;
 import java.util.Date;
 
 @Builder
@@ -15,7 +16,7 @@ import java.util.Date;
 @Data
 public class ChatUploadDTO {
     //!!!!!!!임시 테스트용 !!!!!!!!//
-    private String chatWords;
+    private URI chatData;
 
     //private String chatId;
     //private String userId;
@@ -43,7 +44,7 @@ public class ChatUploadDTO {
 
     public ChatUploadDTO(final ChatEntity chatEntity,UserEntity userEntity) {
         //!!!!!!!임시!!!!!!!//
-        this.chatWords = chatEntity.getChatWords();
+        this.chatData = chatEntity.getChatData();
 
         //this.chatId = chatEntity.getChatId();
         //this.userId = chatEntity.getUserId();
@@ -69,7 +70,7 @@ public class ChatUploadDTO {
 
     public ChatUploadDTO(final ChatEntity chatEntity) {
         //!!!!!!!임시!!!!!!!//
-        this.chatWords = chatEntity.getChatWords();
+        this.chatData = chatEntity.getChatData();
 
         //this.chatId = chatEntity.getChatId();
         //this.userId = chatEntity.getUserId();
@@ -107,7 +108,7 @@ public class ChatUploadDTO {
     //DTO를 받아서 저장
     public static ChatEntity toChatEntity(final ChatUploadDTO dto) {
         return ChatEntity.builder()
-                .chatWords(dto.getChatWords())
+                .chatData(dto.getChatData())
                 //.chatId(dto.getChatId())
                 //.userId(dto.getUserId())
                 .resultNum(dto.getResultNum())

@@ -2,7 +2,15 @@ package com.example.LightEaterApp.Chat.dto;
 
 import com.example.LightEaterApp.Chat.model.ChatEntity;
 import com.example.LightEaterApp.Chat.model.UserEntity;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
 public class ChatResponseBodyDTO {
     private int resultNum;
     private float avoidScore;
@@ -25,7 +33,7 @@ public class ChatResponseBodyDTO {
         this.doubtText4 ="doubtText4";
         this.doubtText5 ="doubtText5";
     }
-
+/*
 
     public ChatResponseBodyDTO (final ChatEntity chatEntity) {
         this.resultNum = chatEntity.getResultNum();
@@ -49,4 +57,7 @@ public class ChatResponseBodyDTO {
         this.doubtText4 ="doubtText4";
         this.doubtText5 ="doubtText5";
     }
+
+
+ */
 }
